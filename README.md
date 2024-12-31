@@ -29,6 +29,18 @@ The supplementary video can be viewed here:
 alt="GIE-mapping  introduction video" width="480" height="270" /></a>
 </p>
 
+## Save EDT map with 2D LiDAR input (For [MGL](https://github.com/shenhm516/mgl))
+```
+roslaunch GIE scan2D.launch
+```
+If you don't have 2D Laser scan, a [package](https://github.com/shenhm516/pointcloud_to_laserscan) can be used to convert ```ouster/points``` to ```ouster/scan``` .
+```
+roslaunch pointcloud_to_laserscan sample_node.launch
+```
+```
+rosbag play your_bag.bag --clock
+```
+You can get a EDT map in ```.png``` formation, when node be killed.
 ## Supported data input:
 
 - Any sensor outputs pointcloud (e.g., OS32 LiDAR, Mid360)
