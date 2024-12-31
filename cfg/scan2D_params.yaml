@@ -1,0 +1,44 @@
+for_motion_planner: true
+robot_r: 0.2
+
+display_loc_edt: true
+display_loc_ogm: true
+display_glb_edt: true
+display_glb_ogm: false
+vis_interval: 1
+vis_height: 0.8
+
+# profile the rms every time the visualization msg is published
+profile_loc_rms: false
+profile_glb_rms: true
+log_name: "test.csv"
+
+occupancy_threshold: 180
+
+voxel_width: 0.1
+
+local_size_x: 10
+local_size_y: 10
+local_size_z: 3
+
+extrinsic_T: [1, 0, 0, 0,
+              0, 1, 0, 0, 
+              0, 0, 1, 0,
+              0, 0, 0, 1]
+external_T: [6.529497742525925963e-01,7.570422646391739008e-01,2.331527082161114969e-02,-6.519305602335720096e+00,
+            -7.572564491346088777e-01,6.531174184747798872e-01,5.549134054187591968e-04,6.172404529254070127e+00,
+            -1.480751658893419975e-02,-1.801796977578290840e-02,9.997280081190251799e-01,3.332569995820551245e+00,
+            0.000000000000000000e+00,0.000000000000000000e+00,0.000000000000000000e+00,1.000000000000000000e+00]              
+
+ogm:
+  min_height: -10
+  max_height: 10
+
+wave:
+  fast_mode: true
+  cutoff_dist: 6
+
+# params of hash table
+hash:
+  bucket_max: 10000
+  block_max: 11997
